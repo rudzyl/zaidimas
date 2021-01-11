@@ -6,13 +6,14 @@ import java.util.Scanner;
 public class Zaidimas {
 
     public static void main(String[] args) {
+    //skaiciuokle
     int suzaistaPartiju = 0;
     int zmogusLaimejo = 0;
     int kompasLaimejo = 0;
     int lygiosios = 0;
     
     while(true) {
-        
+        //meniu pasirinkimai
         System.out.println("1. Akmuo");
         System.out.println("2. Zirkles");
         System.out.println("3. Popierius");
@@ -23,7 +24,7 @@ public class Zaidimas {
         int zp = sc.nextInt();
         int zmogausEjimas = 0;
         int kompoEjimas = 0;
-        
+        //galimi zaidejo pasirinkimai
         if(zp == 1) {
             zmogausEjimas = 1;
             System.out.println("Akmuo");
@@ -38,6 +39,7 @@ public class Zaidimas {
             System.out.println("Pabaiga");
             break;
         }
+        //ar validus zaidejo pasirinkimas
         if(zp != 1 && zp != 2 && zp != 3 && zp != 0) {
             System.out.println("1. Akmuo");
             System.out.println("2. Zirkles");
@@ -46,7 +48,7 @@ public class Zaidimas {
             break;
         }
        System.out.println();
-       
+       //kompiuterio pasirinkimai
        System.out.println("Kompiuterio pasirinkimas");
        double kp =(int)(Math.random()* 3) + 1;
        if(kp == 1) {
@@ -62,7 +64,7 @@ public class Zaidimas {
         System.out.println();
     
         System.out.println("Laimejo");
-        
+        //Galimos baigtys
         if(zmogausEjimas == kompoEjimas) {
             System.out.println("LYGIOSIOS");
             lygiosios++;
@@ -92,7 +94,7 @@ public class Zaidimas {
             kompasLaimejo++;
             suzaistaPartiju++;
         }
-        
+        //issausdinama skaiciuokle
         System.out.println();
         System.out.println("Zaidejo laimejimai:" + zmogusLaimejo);
         System.out.println("Kompiuterio laimejimai:" + kompasLaimejo);
